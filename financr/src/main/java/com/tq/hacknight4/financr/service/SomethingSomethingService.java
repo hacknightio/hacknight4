@@ -12,5 +12,7 @@ public class SomethingSomethingService {
 
   public void shameMe() {
 
+    plaidRepo.test();
+
   }
 }
