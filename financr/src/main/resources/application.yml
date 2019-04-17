@@ -5,3 +5,28 @@ financr:
     plaid_products: transactions
     plaid_env: sandbox
 
+
+insults:
+
+    people:
+        - "your mom"
+        - "your friends"
+        - "a girl named Brandy"
+
+    yothang:
+        - "your face"
+        - "you"
+        - "your soul"
+
+    templates:
+        - "ya <people> wont like <yothang> any better when you spend money"
+        - "last night your mom told me to tell you to stop spending money on <cat>"
+
+
+
+
+trans:
+    payee:
+        - "Google"
+    category:
+        - "shoes"

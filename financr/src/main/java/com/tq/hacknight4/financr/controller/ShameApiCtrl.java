@@ -18,9 +18,9 @@ public class ShameApiCtrl {
   SomethingSomethingService something;
 
   @GetMapping
-  public void get( ) {
+  public String get( ) {
     log.info("web api controller");
-    something.shameMe();
+    return something.getShame();
   }
 
 

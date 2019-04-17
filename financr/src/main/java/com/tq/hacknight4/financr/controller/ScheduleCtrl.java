@@ -19,7 +19,7 @@ public class ScheduleCtrl {
   @Scheduled(fixedRate = 60_000) // 1 minute
   public void timed() {
     log.info("scheduled controller");
-    something.shameMe();
+    log.info(something.getShame());
 
   }
 

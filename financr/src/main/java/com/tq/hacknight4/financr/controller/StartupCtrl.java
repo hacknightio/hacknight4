@@ -19,7 +19,7 @@ public class StartupCtrl implements ApplicationRunner {
   @Override
   public void run(ApplicationArguments args) throws Exception {
     log.info("startup controller");
-    something.shameMe();
+    log.info(something.getShame());
   }
 
 

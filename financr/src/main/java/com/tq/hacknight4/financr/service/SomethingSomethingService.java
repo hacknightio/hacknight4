@@ -1,5 +1,6 @@
 package com.tq.hacknight4.financr.service;
 
+import com.tq.hacknight4.financr.Repo.InsultRepo;
 import com.tq.hacknight4.financr.Repo.PlaidRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,10 +16,17 @@ public class SomethingSomethingService {
   @Autowired
   PlaidRepo plaidRepo;
 
-  public void shameMe() {
+  @Autowired
+  InsultRepo insultRepo;
+
+  public String getShame() {
     log.info("SERVICE");
 
     plaidRepo.test();
+
+    String insult = insultRepo.getInsult("shoes");
+
+    return insult;
 
   }
 }
