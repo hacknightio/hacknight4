@@ -1,5 +1,3 @@
-alert("this is the alert");
-
 document.body.onload = function() {
     fetch('https://api.robinhood.com/quotes/?symbols=PS', {
         headers: {
