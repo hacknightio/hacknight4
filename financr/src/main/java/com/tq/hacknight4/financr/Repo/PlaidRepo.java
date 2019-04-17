@@ -18,8 +18,7 @@ public class PlaidRepo {
     String apiToken;
 
 
-    void test() {
-        client.service().
+    public void test() {
         TransactionsGetRequest request = new TransactionsGetRequest()
         client.service().transactionsGet()
     }
