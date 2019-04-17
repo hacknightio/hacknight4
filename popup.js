@@ -1,12 +1,13 @@
 document.body.onload = function() {
-    fetch('https://api.robinhood.com/quotes/?symbols=PS', {
-        headers: {
-            Authorization: ''
-        }
-    }).then((r) => {
-        return r.json();	
-    })
-    .then((data) => {
-        document.write(JSON.stringify(data));
-    })
+    const button = document.querySelector('button')
+    
+    button.addEventListener('click', () => {
+        const trailing = document.querySelector('#trailing');
+        const symbol = document.querySelector('#symbol');
+    
+        chrome.runtime.sendMessage({
+            trailing: trailing.value,
+            symbol: symbol.value
+        });
+    });
 }

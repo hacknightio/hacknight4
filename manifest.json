@@ -6,8 +6,13 @@
     "default_popup": "popup.html",
     "default_icon": "images/robbinhoodbot-16.png" 
   },
+  "background": {
+    "scripts": ["background.js"]
+  },
   "permissions": [
-    "https://*.robinhood.com/"
+    "https://*.robinhood.com/",
+    "storage",
+    "notifications"
   ]
 }
 
