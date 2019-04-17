@@ -36,9 +36,22 @@ public class PlaidRepo {
 
     double min = 5D;
     double max = 100D;
+    int TRANSACTION_COUNT = 5;
 
     private CoolTransaction getRandomTransaction() {
-        return new CoolTransaction();
+        String payee = randFrom(transModel.getPayee());
+        String category = randFrom(transModel.getCategory());
+
+        CoolTransaction firstTransaction = new CoolTransaction();
+        firstTransaction.setAccountId("cooldude420");
+        firstTransaction.setAccountOwner("Jaden Smith");
+        firstTransaction.setAmount(ThreadLocalRandom.current().nextDouble(min, max));
+        firstTransaction.setName("12345");
+        firstTransaction.setDate("4/16/2019");
+        firstTransaction.setOriginalDescription(payee);
+        firstTransaction.setCategory(Arrays.asList(category));
+
+        return firstTransaction;
     }
 
 
@@ -56,20 +69,12 @@ public class PlaidRepo {
 //            e.printStackTrace();
 //        }
 
-        String payee = randFrom(transModel.getPayee());
-        String category = randFrom(transModel.getCategory());
-
         ArrayList<CoolTransaction> transactions = new ArrayList<>();
 
-        CoolTransaction firstTransaction = new CoolTransaction();
-        firstTransaction.setAccountId("cooldude420");
-        firstTransaction.setAccountOwner("Jaden Smith");
-        firstTransaction.setAmount(ThreadLocalRandom.current().nextDouble(min, max));
-        firstTransaction.setName("12345");
-        firstTransaction.setDate("4/16/2019");
-        firstTransaction.setOriginalDescription(payee);
-        firstTransaction.setCategory(Arrays.asList(category));
-        transactions.add(firstTransaction);
+        for (int i = 0; i < TRANSACTION_COUNT; i++) {
+            transactions.add(getRandomTransaction());
+        }
+
         return transactions;
     }
 }
