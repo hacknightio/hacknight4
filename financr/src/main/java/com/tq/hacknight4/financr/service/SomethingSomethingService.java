@@ -10,6 +10,7 @@ public class SomethingSomethingService {
   @Autowired
   PlaidRepo plaidRepo;
 
+  public void shameMe() {
 
-
+  }
 }
