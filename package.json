@@ -1,32 +1,31 @@
 {
-  "name": "hacknight4",
-  "version": "0.1.0",
+  "name": "build-your-own-mint-server",
   "private": true,
-  "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.2",
-    "@types/jest": "24.0.11",
-    "@types/node": "11.13.4",
-    "@types/react": "16.8.13",
-    "@types/react-dom": "16.8.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
-    "typescript": "3.4.3"
-  },
+  "main": "index.js",
+  "author": "Team 3",
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "prestart": "npm i && npm i --prefix client",
+    "start": "concurrently --kill-others -c cyan,magenta \"npm:server:start\" \"npm:client:start\"",
+    "server:start": "nodemon index.js BANK",
+    "client:start": "npm start --prefix client",
+    "test": "node index.js",
+    "test-plaid": "node scripts/testPlaid.js",
+    "test-sheets": "node scripts/testSheets.js",
+    "token-plaid": "node scripts/plaidServer.js",
+    "token-sheets": "node scripts/getSheetsToken.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "googleapis": "27",
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0",
+    "nodemon": "^1.18.11",
+    "plaid": "^2.10.0"
+  }
 }
