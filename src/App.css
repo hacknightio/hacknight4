@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App-logo {
@@ -39,4 +43,9 @@
 
 .Burrito-column {
   text-align: left;
+}
+
+.Burrito-card {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

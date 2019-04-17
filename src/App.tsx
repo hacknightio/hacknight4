@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Burritos, Burrito} from "./models/burrito";
 import { BurritoDetails } from './components/burrito-details';
+import Button from '@material-ui/core/Button';
 
 class App extends Component <{},{value: number}>{
   constructor(props:{}) {
@@ -23,27 +24,18 @@ class App extends Component <{},{value: number}>{
   render() {
     return (
       <div className="App">
-        <form onSubmit={this.handleSubmit}>
+        <form>
         <label>
           Money Amount:
           <input type="number" value={this.state.value} onChange={this.handleChange}/>
         </label>
-        <input type="submit" value="Submit" />
       </form>
       <label>
         ${this.state.value}
       </label>
-      <table className="Burrito-table">
-        <tr>
-          <th className="Burrito-column">Burrito</th>
-          <th>Count</th>
-          <th>Total Calories</th>
-          <th>Starving Kids to Feed</th>
-        </tr>
       {Burritos.map(burrito => {
-        return (<BurritoDetails burrito={burrito} total={this.state.value}/>)
+        return (<div className="Burrito-card"><BurritoDetails burrito={burrito} total={this.state.value}/></div>)
       })}
-      </table>
       </div>
     );
   }
