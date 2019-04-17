@@ -1,37 +1,44 @@
-# hacknight4 - IRS Victim Support Group
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### The Secret Ingredient: Finance APIs
+## Available Scripts
 
-> Nothing can be said to be certain, except death and taxes.
-> - Benjamin Franklin, 1789
+In the project directory, you can run:
 
-Given we've all just been pick-pocketed by Big Brother, we figured it'd be fun to focus tonight's **SECRET INGREDIENT** on anything finance-related. 
-`Stripe`, `Mint`, `TurboTax`, `CryptoCoins`, `Quickbooks`, you name it. Integrating with any and all of those could be neat. 
-Or **building your own** Mint, Expensify, or other budget tool could also be interesting. Whatever tickles your fancy and does something "cool" (or something at all) is the major goal. 
+### `npm start`
 
-### Grading
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Grading will incredibly biased and hardly scientific, but your best bet is to weigh priorities against the following list:
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-1) Can you checkout your repository and "run it" according to the `README`
-2) Is whatever your project does reproducable? Smoke and mirrors is totally acceptable for parts that could be completed given more time, but if 
-your demo scenario is the only thing your project can do, it might be a bit brittle for the judges taste
-3) Did you integrate with any services? Have a mobile client? Did you do a cool thing? 
-4) Code quality, meh. We're all working fast. 
+### `npm test`
 
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Format
+### `npm run build`
 
-The hackathon will begin at `6:30`, following the `Iron Chef` format where a _secret ingredient_ is revealed and you the hackers incorporate it into... something? 
-A web app, a algorithm, a mobile app, all three, etc. Whatever your mind comes up with. 
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-**But Basil, what is a secret ingredient?** Simple: anything. Historically it's been things like some hardware / device (VR), a API / technology (AWS Alexa), or any other 
-technology-related "thing". The only common thread is it's got to be immediately accessible to everyone equally (and free to hack at). 
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-**But I wanted to do XYZ instead!** Great, do it! If you build something awesome and totally unrelated, you *might* still win. But even better, _bake_ that secret ingredient in
-to your solution and win on both fronts! 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- `5:30 - 6:15`: Introduction, food, team organization, Wifi, etc
-- `6:15 - 6:30`: Secret Ingredient Revealed
-- `6:30 - 9:00`: Hack! Welcome to come and go as you please, but if you'd like to submit for judging and prizes, make sure to demo and submit a PR on this repo! 
-- `9:00 - Whenever`: Judgement, prizes, and all the glory
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
