@@ -11,10 +11,28 @@ public class InsultModel {
 
   private List<String> people;
   private List<String> templates;
+  private List<String> foodTemplates;
   private List<String> yothang;
+  private List<String> pet;
+
+  public List<String> getFoodTemplates() {
+    return foodTemplates;
+  }
+
+  public void setFoodTemplates(List<String> foodTemplates) {
+    this.foodTemplates = foodTemplates;
+  }
 
   public List<String> getYothang() {
     return yothang;
+  }
+
+  public List<String> getPet() {
+    return pet;
+  }
+
+  public void setPet(List<String> pet) {
+    this.pet = pet;
   }
 
   public void setYothang(List<String> yothang) {
