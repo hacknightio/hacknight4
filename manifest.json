@@ -1,0 +1,19 @@
+{
+  "name": "Robinhood Bot",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/robbinhoodbot-16.png" 
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "https://*.robinhood.com/",
+    "storage",
+    "notifications"
+  ]
+}
+
+
