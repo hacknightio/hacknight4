@@ -1,4 +1,24 @@
-# hacknight4 - TBD 
+# hacknight4 - IRS Victim Support Group
+
+### The Secret Ingredient: Finance APIs
+
+> Nothing can be said to be certain, except death and taxes.
+> - Benjamin Franklin, 1789
+
+Given we've all just been pick-pocketed by Big Brother, we figured it'd be fun to focus tonight's **SECRET INGREDIENT** on anything finance-related. 
+`Stripe`, `Mint`, `TurboTax`, `CryptoCoins`, `Quickbooks`, you name it. Integrating with any and all of those could be neat. 
+Or **building your own** Mint, Expensify, or other budget tool could also be interesting. Whatever tickles your fancy and does something "cool" (or something at all) is the major goal. 
+
+### Grading
+
+Grading will incredibly biased and hardly scientific, but your best bet is to weigh priorities against the following list:
+
+1) Can you checkout your repository and "run it" according to the `README`
+2) Is whatever your project does reproducable? Smoke and mirrors is totally acceptable for parts that could be completed given more time, but if 
+your demo scenario is the only thing your project can do, it might be a bit brittle for the judges taste
+3) Did you integrate with any services? Have a mobile client? Did you do a cool thing? 
+4) Code quality, meh. We're all working fast. 
+
 
 ### Format
 
