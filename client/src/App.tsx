@@ -12,6 +12,15 @@ class App extends Component<{}, { value: string }> {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  async componentDidMount() {
+    console.log('#####')
+    // await fetch('http://localhost:8081/get_access_token');
+    const vRes = await fetch('http://localhost:8080/balance');
+    const value = await vRes.json();
+    console.log('value: \n', value);
+    this.setState({ value });
+  }
   handleChange(event: ChangeEvent<HTMLInputElement>) {
     this.setState({ value: event.target.value });
   }
