@@ -1,6 +1,22 @@
 # hacknight4 - IRS Victim Support Group
 
-### The Secret Ingredient: Finance APIs
+## Financr Shame-a-tron
+
+currently it uses stubbed out data to insult you on startup, on a web request, or on a schedule. It looks for the categories you have had the most transactions within.
+
+ideas: 
+
+1. schedule the system to tweet insults at you daily based on your spending habits that day. 
+2. use this to augment your own Mint clone to decorate your dashboard with insults. 
+
+work to be done:
+
+1. add another form of delivering insults like for example tweets. 
+2. finish implementing the Plad API for hooking up to your bank. we curerntly generate sample data that is pretty close to the type of data Plad will return.
+3.  add more insults specific to type of categories
+4.  introduce additional metrics to feed into your insults like frequent Vendors, or high dollar amounts. 
+
+## The Secret Ingredient: Finance APIs
 
 > Nothing can be said to be certain, except death and taxes.
 > - Benjamin Franklin, 1789
