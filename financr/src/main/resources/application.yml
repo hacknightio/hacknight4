@@ -1,0 +1,7 @@
+financr:
+    client_id: 5cb67695f9c7ee0012d5ade1
+    secret: b9cc44fc9bf078cfe16bd487064db5
+    public_key: 707b8de9c0ab02c65ef8476471e5d9
+    plaid_products: transactions
+    plaid_env: sandbox
+
