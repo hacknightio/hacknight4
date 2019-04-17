@@ -2,10 +2,10 @@
 
 ## Team 3
 
-helenmcox6
-tylerevans116
-heedfulcrayon
-jantaylor
+- @helenmcox6
+- @snaveevans
+- @heedfulcrayon
+- @jantaylor
 
 ## How to run
 
