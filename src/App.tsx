@@ -1,20 +1,19 @@
 import React, { Component, ChangeEvent, FormEvent } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Burritos, Burrito } from "./models/burrito";
+import { Burritos } from "./models/burrito";
 import { BurritoDetails } from "./components/burrito-details";
-import Button from "@material-ui/core/Button";
+import { TextField } from "@material-ui/core";
 
-class App extends Component<{}, { value: number }> {
+class App extends Component<{}, { value: string }> {
   constructor(props: {}) {
     super(props);
-    this.state = { value: 100 };
+    this.state = { value: "100" };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(event: ChangeEvent<HTMLInputElement>) {
-    this.setState({ value: parseInt(event.target.value) });
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -22,23 +21,24 @@ class App extends Component<{}, { value: number }> {
     event.preventDefault();
   }
   render() {
+    const value = parseInt(this.state.value);
+    const total = isNaN(value) ? 0 : value;
     return (
       <div className="App">
-        <form>
-          <label>
-            Money Amount:
-            <input
-              type="number"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />
-          </label>
-        </form>
-        <label>${this.state.value}</label>
+          <TextField
+            id="outlined-email-input"
+            label="Tax Refund Amount"
+            type="amount"
+            name="amount"
+            margin="normal"
+            variant="outlined"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
         {Burritos.map(burrito => {
           return (
             <div className="Burrito-card" key={burrito.id}>
-              <BurritoDetails burrito={burrito} total={this.state.value} />
+              <BurritoDetails burrito={burrito} total={total} />
             </div>
           );
         })}
