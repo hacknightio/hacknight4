@@ -1,5 +1,7 @@
 # hacknight4 - IRS Victim Support Group
 
+[Join us on slack!](https://hacknightio.herokuapp.com/)
+
 ### The Secret Ingredient: Finance APIs
 
 > Nothing can be said to be certain, except death and taxes.
