@@ -1,21 +1,34 @@
 const numbers = [];
 
+// setThresholdFn((maxValue, value) => {
+//     return (maxValue - value)/maxValue > .02
+// });
+
 setInterval(() => {
     chrome.storage.sync.get(['trailing', 'symbol'], (result) => {
         if(result.symbol) {
+            var envUrl = chrome.runtime.getURL("env.json");
+            fetch(envUrl).then(data=> {
+                console.log(data);
+                return data.json();
+            }).then(data=> {
+                fetch('https://api.robinhood.com/quotes/?symbols=PS', {
+                    headers: {
+                        Authorization: 'Bearer '+data.bearer
+                    }
+                    }).then((r) => {
+                        return r.json();	
+                    })
+                    .then((data) => {
+                        // appedEntry(result.symbol, data.results[0]['bid_price']);
+    
+                        numbers.push(data.results[0]['bid_price']);
+                        runCheck();
+                        document.write(JSON.stringify(data));
+                    })
+            })
 
-            fetch('https://api.robinhood.com/quotes/?symbols=PS', {
-                headers: {
-                    Authorization: 'Bearer'
-                }
-                }).then((r) => {
-                    return r.json();	
-                })
-                .then((data) => {
-                    numbers.push(data.results[0]['bid_price']);
-                    runCheck();
-                    document.write(JSON.stringify(data));
-                })
+            
         }
     });
     
@@ -34,7 +47,7 @@ chrome.runtime.onMessage.addListener((val) => {
 })
 
 function runCheck() {
-    if(numbers.length === 5) {
+    if(numbers.length === 10) {
         chrome.notifications.create('123', {
             title: 'Sell',
             message: 'You should sell now!',
