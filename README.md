@@ -7,7 +7,11 @@
 
 Given we've all just been pick-pocketed by Big Brother, we figured it'd be fun to focus tonight's **SECRET INGREDIENT** on anything finance-related. 
 `Stripe`, `Mint`, `TurboTax`, `CryptoCoins`, `Quickbooks`, you name it. Integrating with any and all of those could be neat. 
+
 Or **building your own** Mint, Expensify, or other budget tool could also be interesting. Whatever tickles your fancy and does something "cool" (or something at all) is the major goal. 
+
+If you want some inspiration, check out this "build your own mint" that gets finance data via Plaid and stores results in Google Sheets (and is based on Vue.js, the front end framework that's totally better than Angular & React). Check out [our forked repo](https://github.com/hacknightio/build-your-own-mint) here to get running quick. 
+
 
 ### Grading
 
