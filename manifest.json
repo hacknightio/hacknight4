@@ -6,7 +6,6 @@
     "default_popup": "popup.html",
     "default_icon": "images/robbinhoodbot-16.png" 
   }
-  "page_action": {.images/robbinhoodbot-16.png}
 }
 
 
