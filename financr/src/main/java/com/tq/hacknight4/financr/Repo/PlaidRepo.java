@@ -1,7 +1,6 @@
 package com.tq.hacknight4.financr.Repo;
 
 import com.plaid.client.PlaidClient;
-import com.plaid.client.response.TransactionsGetResponse.Transaction;
 import com.tq.hacknight4.financr.Model.CoolTransaction;
 import com.tq.hacknight4.financr.model.TransModel;
 import org.slf4j.Logger;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import static com.tq.hacknight4.financr.RandUtils.randFrom;
@@ -22,7 +20,6 @@ import static com.tq.hacknight4.financr.RandUtils.randFrom;
 public class PlaidRepo {
 
   Logger log = LoggerFactory.getLogger(this.getClass());
-
 
     @Autowired
     PlaidClient client;
@@ -40,7 +37,7 @@ public class PlaidRepo {
 
     private CoolTransaction getRandomTransaction() {
         String payee = randFrom(transModel.getPayee());
-        String category = randFrom(transModel.getCategory());
+        List<String> category = Arrays.asList(randFrom(transModel.getCategory()), randFrom(transModel.getCategory()));
 
         CoolTransaction firstTransaction = new CoolTransaction();
         firstTransaction.setAccountId("cooldude420");
@@ -49,7 +46,7 @@ public class PlaidRepo {
         firstTransaction.setName("12345");
         firstTransaction.setDate("4/16/2019");
         firstTransaction.setOriginalDescription(payee);
-        firstTransaction.setCategory(Arrays.asList(category));
+        firstTransaction.setCategory(category);
 
         return firstTransaction;
     }
