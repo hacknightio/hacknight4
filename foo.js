@@ -4,14 +4,17 @@ const callbacks = [];
 
 let hasHitThreshold; //this a percent
 
-function setThreshold(pHasHitThreshold) {
+//API to set threshold Fn
+function setThresholdFn(pHasHitThreshold) {
     hasHitThreshold = pHasHitThreshold;
 }
 
+//set functions to run once notification is needed
 function notify(stockname, notifyType) {
     callbacks.forEach(cb => cb(stockname, notifyType));
 }
 
+//gets current stock list 
 function getCurStockList(stockName, value) {
     let stockList = stockMap[stockName] || [];
     stockList.append(value);
@@ -21,10 +24,12 @@ function getCurStockList(stockName, value) {
         : stockList;
 }
 
+//set tthe current stock list to the stockMap
 function setCurStockList(stockName, stockList) {
     stockMap[stockName] = stockList;
 }
 
+//add in a stock name along with current value
 function appedEntry(stockName, value) {
    
     const stockList = getCurStockList(stockName, value);
