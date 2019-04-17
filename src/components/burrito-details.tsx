@@ -84,9 +84,7 @@ const BurritoDetailsComponent = (props: {
       <Card className={classes.card}>
         <CardHeader
           avatar={
-            <Avatar aria-label="Recipe" className={classes.avatar}>
-              R
-            </Avatar>
+            <Avatar aria-label="Recipe" className={classes.avatar} src={burrito.logo}/>
           }
           action={
             <IconButton>
@@ -94,11 +92,11 @@ const BurritoDetailsComponent = (props: {
             </IconButton>
           }
           title={burrito.name}
-          subheader={"$" + burrito.cost}
+          subheader={"$" + burrito.cost.toFixed(2)}
         />
         <CardMedia
           className={classes.media}
-          image="https://www.recipetineats.com/wp-content/uploads/2017/06/Burritos-1-500x500.jpg"
+          image={burrito.image}
           title={burrito.name}
         />
         <CardContent>
