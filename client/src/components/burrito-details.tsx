@@ -70,47 +70,41 @@ const styles = (theme: Theme) =>({
   },
 });
 
-export const BurritoDetails = (props: {
+const BurritoDetailsComponent = (props: {
   burrito: Burrito,
   total: number,
   classes?:{[key: string]:any}
 }) => {
   const {burrito,total} = props;
   const classes = props.classes || {};
-  const burritoNum = total / burrito.cost
+  const burritoNum = Math.floor(total / burrito.cost)
   const burritoTotalCalories = burritoNum * burrito.calories
-  const kidsToFeed = burritoTotalCalories / 2000
+  const kidsToFeed = Math.floor(burritoTotalCalories / 2000)
     return (
       <Card className={classes.card}>
         <CardHeader
           avatar={
-            <Avatar aria-label="Recipe" className={classes.avatar}>
-              R
-            </Avatar>
+            <Avatar aria-label="Recipe" className={classes.avatar} src={burrito.logo}/>
           }
           action={
             <IconButton>
               <MoreVertIcon />
             </IconButton>
           }
-          title="Shrimp and Chorizo Paella"
-          subheader="September 14, 2016"
+          title={burrito.name}
+          subheader={"$" + burrito.cost.toFixed(2)}
         />
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/paella.jpg"
-          title="Paella dish"
+          image={burrito.image}
+          title={burrito.name}
         />
         <CardContent>
           <Typography component="p">
-            This impressive paella is a perfect party dish and a fun meal to cook together with your
-            guests. Add 1 cup of frozen peas along with the mussels, if you like.
+            This tasty treat consists of {burrito.calories} calories.  You can afford {burritoNum} of these burritos which is {burritoTotalCalories} calories in total.  With this mountain of burritos you could feed {kidsToFeed} starving children in Africa.
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton>
           <IconButton aria-label="Share">
             <ShareIcon />
           </IconButton>
@@ -120,4 +114,4 @@ export const BurritoDetails = (props: {
   }
 
 
-export default withStyles(styles)(BurritoDetails);
+export const BurritoDetails = withStyles(styles)(BurritoDetailsComponent);
