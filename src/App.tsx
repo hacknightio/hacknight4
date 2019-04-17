@@ -1,6 +1,8 @@
 import React, { Component, ChangeEvent, FormEvent } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Burritos, Burrito} from "./models/burrito";
+import { BurritoDetails } from './components/burrito-details';
 
 class App extends Component <{},{value: number}>{
   constructor(props:{}) {
@@ -31,6 +33,17 @@ class App extends Component <{},{value: number}>{
       <label>
         ${this.state.value}
       </label>
+      <table className="Burrito-table">
+        <tr>
+          <th className="Burrito-column">Burrito</th>
+          <th>Count</th>
+          <th>Total Calories</th>
+          <th>Starving Kids to Feed</th>
+        </tr>
+      {Burritos.map(burrito => {
+        return (<BurritoDetails burrito={burrito} total={this.state.value}/>)
+      })}
+      </table>
       </div>
     );
   }

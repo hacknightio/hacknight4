@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+.Burrito-table {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Burrito-column {
+  text-align: left;
+}
