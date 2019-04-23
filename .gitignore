@@ -1,2 +1,17 @@
 LinkDemo-Swift/Pods/Plaid/ios/LinkKit.framework
 LinkDemo-Swift/Pods/Target Support Files/Pods-LinkDemo-Swift
+LinkDemo-Swift/Pods
+**/xcuserdata/*
+**/*.xcscmblueprint
+**/.DS_Store
+*.log
+/.idea
+node_modules/
+IDEWorkspaceChecks.plist
+LinkDemo-Swift/LinkDemo-Swift/xcuserdata/*
+LinkDemo-Swift/LinkDemo-Swift/project.xcworkspace/xcuserdata/*
+LinkDemo-Swift/LinkDemo-Swift.xcworkspace/xcuserdata/*
+LinkDemo-Swift.xcodeproj/xcuserdata/*
+LinkDemo-Swift.xcodeproj/project.xcworkspace/xcuserdata/*
+LinkDemo-Swift.xcworkspace/xcuserdata/*
+LinkDemo-Swift.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist

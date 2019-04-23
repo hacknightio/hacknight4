@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import AWSRekognition
+import AWSCore
 import LinkKit
 
 
@@ -21,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 #else
         setupPlaidLinkWithSharedConfiguration()
 #endif
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(
+            regionType: .USEast2,
+            identityPoolId: "us-east-2:8676a520-6525-4483-8282-60aeff0807a9")
+        let configuration = AWSServiceConfiguration(
+            region: .USEast2,
+            credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
         return true
     }
 

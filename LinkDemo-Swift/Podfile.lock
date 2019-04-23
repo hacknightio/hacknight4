@@ -1,16 +1,24 @@
 PODS:
+  - AWSCore (2.9.5)
+  - AWSRekognition (2.9.5):
+    - AWSCore (= 2.9.5)
   - Plaid (1.1.18)
 
 DEPENDENCIES:
+  - AWSRekognition
   - Plaid
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AWSCore
+    - AWSRekognition
     - Plaid
 
 SPEC CHECKSUMS:
+  AWSCore: 90ddc0234a321d5649c9572b1447f528f68d41b9
+  AWSRekognition: 0a2fd798be765eb1416ac63fa27a7649848f10bd
   Plaid: 88717a71549ca2d12f4cfc101888c94472c10022
 
-PODFILE CHECKSUM: 322f52f0783c976a592ee71c4e4fe5b21d5d7fc4
+PODFILE CHECKSUM: 25685f695622d98eca7423a7d4a08259fe791d23
 
 COCOAPODS: 1.5.3

@@ -126,21 +126,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdm-Td-1z8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jeff_portrait.png" translatesAutoresizingMaskIntoConstraints="NO" id="pdm-Td-1z8">
                                 <rect key="frame" x="67" y="144" width="240" height="284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="S0T-qe-K08"/>
+                                    <constraint firstAttribute="height" constant="284" id="lH7-Ce-13U"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1B-5i-PDd">
-                                <rect key="frame" x="123" y="631" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1B-5i-PDd">
+                                <rect key="frame" x="123" y="576" width="128" height="30"/>
                                 <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="openCamera:" destination="A6g-PF-jft" eventType="touchUpInside" id="uQW-8g-CQa"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Celeb Name " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deC-wL-Amz">
+                                <rect key="frame" x="73" y="115" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pdm-Td-1z8" secondAttribute="trailing" constant="52" id="14B-1m-7mi"/>
+                            <constraint firstItem="pdm-Td-1z8" firstAttribute="top" secondItem="Rvf-hm-MoN" secondAttribute="bottom" constant="100" id="QhJ-fK-ViS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s1B-5i-PDd" secondAttribute="trailing" constant="108" id="Vyr-qe-i13"/>
+                            <constraint firstItem="MbL-BQ-5Ac" firstAttribute="top" secondItem="s1B-5i-PDd" secondAttribute="bottom" constant="172" id="f5i-jP-1aW"/>
+                            <constraint firstItem="s1B-5i-PDd" firstAttribute="leading" secondItem="C8P-7F-nzu" secondAttribute="leadingMargin" constant="107" id="mNw-OE-uGo"/>
+                            <constraint firstItem="pdm-Td-1z8" firstAttribute="leading" secondItem="C8P-7F-nzu" secondAttribute="leadingMargin" constant="51" id="z8F-LA-QPT"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="CelebImageView" destination="pdm-Td-1z8" id="gBH-Pd-DMD"/>
                         <outlet property="accountTypeLabel" destination="V3a-q7-R6X" id="IaN-B3-dEl"/>
                         <outlet property="balanceLabel" destination="Bxh-Bc-RFC" id="7tU-bn-yCe"/>
+                        <outlet property="celebNameLabel" destination="deC-wL-Amz" id="NTY-1X-2nk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tq-Oi-raL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -172,6 +194,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UBt-JD-FgE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HR6-by-B5e">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -186,5 +209,6 @@
     </scenes>
     <resources>
         <image name="Button" width="11" height="11"/>
+        <image name="jeff_portrait.png" width="484" height="323"/>
     </resources>
 </document>

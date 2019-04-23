@@ -1,4 +1,15 @@
-# hacknight4 - TBD 
+# hacknight4 - 
+
+
+Go to project directory in terminal and run 
+'pod install' 
+
+Open LinkDemo-Swift.xcworkspace 
+
+The facial recognition will only run on an actual device and not the simulator. 
+
+Make sure to run on Xcode 10.2+ 
+
 
 ### Format
 

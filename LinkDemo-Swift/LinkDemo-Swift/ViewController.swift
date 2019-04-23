@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AWSCore
+import AWSRekognition
 
 // <!-- SMARTDOWN_IMPORT_LINKKIT -->
 import LinkKit
